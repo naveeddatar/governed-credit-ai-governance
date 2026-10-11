@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GovernedCredit AI | Credit Risk, Model Risk & AI Governance</title>
+<style>
+:root {
+  --navy:#10243e;
+  --ink:#172230;
+  --muted:#607086;
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --teal:#1f7a78;
+  --green:#2d7d46;
+  --amber:#b47b16;
+  --line:#d9e0e8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+header{background:var(--navy);color:white;padding:44px 7vw 36px}
+header h1{margin:0;font-size:40px;letter-spacing:-.8px}
+header p{max-width:900px;margin:10px 0 0;color:#d9e5f2;font-size:18px}
+nav{background:white;border-bottom:1px solid var(--line);padding:13px 7vw;position:sticky;top:0;z-index:5}
+nav a{color:var(--navy);text-decoration:none;margin-right:22px;font-weight:700;font-size:14px}
+main{max-width:1200px;margin:auto;padding:34px 24px 70px}
+section{margin:0 0 42px}
+h2{font-size:26px;margin:0 0 16px}
+h3{font-size:17px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:0 3px 12px rgba(14,35,60,.05)}
+.metric{font-size:31px;font-weight:800;color:var(--navy);margin-top:4px}
+.label{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.6px}
+.status{display:inline-block;padding:4px 9px;border-radius:20px;font-size:12px;font-weight:800}
+.green{background:#e4f3e8;color:var(--green)}
+.amber{background:#fff1d6;color:var(--amber)}
+.na{background:#edf0f4;color:#5c6672}
+.model-row{display:grid;grid-template-columns:160px 1fr 70px;gap:12px;align-items:center;margin:11px 0}
+.bar{height:12px;background:#e6ebf1;border-radius:9px;overflow:hidden}
+.fill{height:100%;background:var(--teal)}
+.flow{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.flow span{background:white;border:1px solid var(--line);padding:10px 13px;border-radius:10px;font-weight:700}
+.arrow{color:var(--muted);font-weight:900}
+table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);font-size:14px}
+th{background:#eef3f7;color:var(--navy)}
+.callout{border-left:5px solid var(--teal);background:#eaf5f4;padding:16px 18px;border-radius:8px}
+.small{font-size:13px;color:var(--muted)}
+footer{padding:26px 7vw;background:var(--navy);color:#cbd8e6}
+@media(max-width:850px){.grid,.grid3{grid-template-columns:1fr 1fr}.model-row{grid-template-columns:120px 1fr 55px}}
+@media(max-width:560px){.grid,.grid3{grid-template-columns:1fr}nav{position:static}header h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="label" style="color:#9fc9c7">Credit Risk | Model Risk | AI Governance</div>
+  <h1>GovernedCredit AI Control Center</h1>
+  <p>Explainable credit risk, model-risk management, Responsible AI, monitoring, and governance in one end-to-end financial-sector demonstrator.</p>
+  <p style="margin-top:20px"><a href="GovernedCredit_AI_Executive_Case_Study.pdf" style="display:inline-block;background:#ffffff;color:#10243e;padding:10px 16px;border-radius:9px;text-decoration:none;font-weight:800">Open 3-Page Executive Case Study</a></p>
+</header>
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#performance">Performance</a>
+  <a href="#responsible">Responsible AI</a>
+  <a href="#risk">Model Risk</a>
+  <a href="#monitoring">Monitoring</a>
+  <a href="#governance">Governance</a>
+</nav>
+<main>
+<section id="overview">
+  <h2>Executive Overview</h2>
+  <div class="grid">
+    <div class="card"><div class="label">Champion</div><div class="metric">XGBoost</div><div class="small">Sigmoid calibrated</div></div>
+    <div class="card"><div class="label">Test ROC-AUC</div><div class="metric">0.7854</div><div class="small">+0.0263 vs Logistic Regression</div></div>
+    <div class="card"><div class="label">SHAP Rank Stability</div><div class="metric">0.9972</div><div class="small">Median bootstrap Spearman</div></div>
+    <div class="card"><div class="label">Governance Controls</div><div class="metric">17</div><div class="small">Mapped controls</div></div>
+  </div>
+  <div class="callout" style="margin-top:18px">
+    <strong>Core design principle:</strong> a credit-risk AI system should not merely predict well. It should be understandable, challengeable, governable, monitorable, and appropriate for the decisions it supports.
+  </div>
+</section>
+
+<section id="performance">
+  <h2>Model Performance</h2>
+  <div class="card">
+    <div class="model-row"><strong>Logistic Regression</strong><div class="bar"><div class="fill" style="width:75.92%"></div></div><span>0.7592</span></div>
+    <div class="model-row"><strong>Random Forest</strong><div class="bar"><div class="fill" style="width:78.18%"></div></div><span>0.7818</span></div>
+    <div class="model-row"><strong>XGBoost</strong><div class="bar"><div class="fill" style="width:78.54%"></div></div><span>0.7854</span></div>
+    <p class="small">Bars show test ROC-AUC. XGBoost was selected on an independent model-selection sample before final test review.</p>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><div class="label">PR-AUC</div><div class="metric">0.5669</div></div>
+    <div class="card"><div class="label">Brier Score</div><div class="metric">0.1332</div></div>
+    <div class="card"><div class="label">Calibration Slope</div><div class="metric">0.9460</div></div>
+  </div>
+</section>
+
+<section id="responsible">
+  <h2>Explainability and Responsible AI</h2>
+  <div class="grid3">
+    <div class="card"><h3>Explainability</h3><p>TreeSHAP global and local explanations, reason codes, additivity checks, and explanation-stability testing.</p><span class="status green">CONTROLLED</span></div>
+    <div class="card"><h3>Fairness</h3><p>SEX, AGE, EDUCATION, MARRIAGE, and SEX x AGE audited as non-model attributes.</p><span class="status amber">OPEN MONITORING</span></div>
+    <div class="card"><h3>Human Oversight</h3><p>Review triggers, override design, escalation, and anti-automation-bias controls.</p><span class="status amber">DESIGN COMPLETE</span></div>
+  </div>
+</section>
+
+<section id="risk">
+  <h2>Model Risk</h2>
+  <table>
+    <thead><tr><th>Challenge</th><th>Finding</th><th>Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td>Deduplicated training</td><td>AUC -0.0013</td><td>Duplicates do not materially drive performance</td></tr>
+      <tr><td>Repayment-code recoding</td><td>AUC -0.0009</td><td>Low sensitivity to ambiguous negative codes</td></tr>
+      <tr><td>Winsorization</td><td>AUC +0.0004</td><td>Extreme monetary values do not drive the result</td></tr>
+      <tr><td>Remove repayment history</td><td>AUC -0.0510</td><td>Repayment data is a critical dependency</td></tr>
+      <tr><td>External validity</td><td>High residual risk</td><td>Contemporary institution-specific validation required</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="monitoring">
+  <h2>Monitoring Snapshot</h2>
+  <div class="grid">
+    <div class="card"><div class="label">GREEN</div><div class="metric">14</div></div>
+    <div class="card"><div class="label">AMBER</div><div class="metric">4</div></div>
+    <div class="card"><div class="label">RED</div><div class="metric">0</div></div>
+    <div class="card"><div class="label">NOT AVAILABLE</div><div class="metric">2</div></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><h3>Feature Drift</h3><div class="metric">0.0043</div><div class="small">Maximum critical-feature PSI</div></div>
+    <div class="card"><h3>Score Drift</h3><div class="metric">0.0055</div><div class="small">Score-distribution PSI</div></div>
+    <div class="card"><h3>Review Band</h3><div class="metric">8.09%</div><div class="small">Test observations in review band</div></div>
+  </div>
+</section>
+
+<section id="governance">
+  <h2>AI Governance</h2>
+  <div class="flow">
+    <span>Intended Purpose</span><span class="arrow">></span>
+    <span>Data Governance</span><span class="arrow">></span>
+    <span>Development</span><span class="arrow">></span>
+    <span>Validation</span><span class="arrow">></span>
+    <span>Approval</span><span class="arrow">></span>
+    <span>Monitoring</span>
+  </div>
+  <div class="grid3" style="margin-top:18px">
+    <div class="card"><div class="label">AI Risks</div><div class="metric">12</div></div>
+    <div class="card"><div class="label">RACI Activities</div><div class="metric">17</div></div>
+    <div class="card"><div class="label">Governance Pack</div><div class="metric">PASS</div></div>
+  </div>
+  <p class="small" style="margin-top:15px">Governance mapping includes selected EU AI Act, GDPR, EBA, and ECB governance themes. GovernedCredit AI is a portfolio demonstrator and does not claim production approval, IRB status, or compliance certification.</p>
+</section>
+</main>
+<footer>GovernedCredit AI | Naveed Ahmad | Portfolio demonstrator</footer>
+</body>
+</html>
